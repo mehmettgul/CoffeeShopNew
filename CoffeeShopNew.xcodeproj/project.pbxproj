@@ -7,25 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1610E12AB97385002D00D6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610DF2AB97385002D00D6 /* FeedCell.swift */; };
+		DA1610E22AB97385002D00D6 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1610E02AB97385002D00D6 /* FeedCell.xib */; };
+		DA1610E52AB994C9002D00D6 /* HomeViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610E42AB994C9002D00D6 /* HomeViewmodel.swift */; };
+		DA1610E82AB99613002D00D6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610E62AB99613002D00D6 /* CategoryCell.swift */; };
+		DA1610E92AB99613002D00D6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1610E72AB99613002D00D6 /* CategoryCell.xib */; };
+		DA1610EC2AB9B528002D00D6 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610EA2AB9B528002D00D6 /* CartCell.swift */; };
+		DA1610ED2AB9B528002D00D6 /* CartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1610EB2AB9B528002D00D6 /* CartCell.xib */; };
+		DA1610F12AB9BD1C002D00D6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610F02AB9BD1C002D00D6 /* PaymentViewController.swift */; };
+		DA1610F42AB9D383002D00D6 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610F22AB9D383002D00D6 /* AddressCell.swift */; };
+		DA1610F52AB9D383002D00D6 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1610F32AB9D383002D00D6 /* AddressCell.xib */; };
 		DA8AA7982AB87DB20017F268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7972AB87DB20017F268 /* AppDelegate.swift */; };
 		DA8AA79A2AB87DB20017F268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */; };
-		DA8AA79C2AB87DB20017F268 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA79B2AB87DB20017F268 /* ViewController.swift */; };
+		DA8AA79C2AB87DB20017F268 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA79B2AB87DB20017F268 /* HomeViewController.swift */; };
 		DA8AA79F2AB87DB20017F268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AA79D2AB87DB20017F268 /* Main.storyboard */; };
 		DA8AA7A22AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7A02AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld */; };
 		DA8AA7A42AB87DB30017F268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA8AA7A32AB87DB30017F268 /* Assets.xcassets */; };
 		DA8AA7A72AB87DB30017F268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8AA7A52AB87DB30017F268 /* LaunchScreen.storyboard */; };
+		DA8AA7B22AB880E80017F268 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7B12AB880E80017F268 /* FavoriteViewController.swift */; };
+		DA8AA7B42AB881100017F268 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7B32AB881100017F268 /* CategoryViewController.swift */; };
+		DA8AA7B62AB8813D0017F268 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7B52AB8813D0017F268 /* CartViewController.swift */; };
+		DAD0A8272ABAC8FF00C08E78 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0A8262ABAC8FF00C08E78 /* ListViewController.swift */; };
+		DAD0A82A2ABACCD800C08E78 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0A8292ABACCD800C08E78 /* FeedData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1610DF2AB97385002D00D6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		DA1610E02AB97385002D00D6 /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		DA1610E42AB994C9002D00D6 /* HomeViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewmodel.swift; sourceTree = "<group>"; };
+		DA1610E62AB99613002D00D6 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		DA1610E72AB99613002D00D6 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		DA1610EA2AB9B528002D00D6 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		DA1610EB2AB9B528002D00D6 /* CartCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartCell.xib; sourceTree = "<group>"; };
+		DA1610F02AB9BD1C002D00D6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = Cells/PaymentViewController.swift; sourceTree = "<group>"; };
+		DA1610F22AB9D383002D00D6 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		DA1610F32AB9D383002D00D6 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		DA8AA7942AB87DB20017F268 /* CoffeeShopNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShopNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AA7972AB87DB20017F268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA8AA79B2AB87DB20017F268 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA8AA79B2AB87DB20017F268 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DA8AA79E2AB87DB20017F268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA8AA7A12AB87DB20017F268 /* CoffeeShopNew.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoffeeShopNew.xcdatamodel; sourceTree = "<group>"; };
 		DA8AA7A32AB87DB30017F268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA8AA7A62AB87DB30017F268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA8AA7A82AB87DB30017F268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8AA7B12AB880E80017F268 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		DA8AA7B32AB881100017F268 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		DA8AA7B52AB8813D0017F268 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		DAD0A8262ABAC8FF00C08E78 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		DAD0A8292ABACCD800C08E78 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +69,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1610DE2AB97357002D00D6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA1610DF2AB97385002D00D6 /* FeedCell.swift */,
+				DA1610E02AB97385002D00D6 /* FeedCell.xib */,
+				DA1610E62AB99613002D00D6 /* CategoryCell.swift */,
+				DA1610E72AB99613002D00D6 /* CategoryCell.xib */,
+				DA1610EA2AB9B528002D00D6 /* CartCell.swift */,
+				DA1610EB2AB9B528002D00D6 /* CartCell.xib */,
+				DA1610F22AB9D383002D00D6 /* AddressCell.swift */,
+				DA1610F32AB9D383002D00D6 /* AddressCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA1610E32AB9946E002D00D6 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				DA1610E42AB994C9002D00D6 /* HomeViewmodel.swift */,
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
 		DA8AA78B2AB87DB20017F268 = {
 			isa = PBXGroup;
 			children = (
@@ -58,16 +111,56 @@
 		DA8AA7962AB87DB20017F268 /* CoffeeShopNew */ = {
 			isa = PBXGroup;
 			children = (
-				DA8AA7972AB87DB20017F268 /* AppDelegate.swift */,
-				DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */,
-				DA8AA79B2AB87DB20017F268 /* ViewController.swift */,
+				DAD0A8282ABACC6400C08E78 /* Model */,
+				DA1610E32AB9946E002D00D6 /* Viewmodel */,
+				DA8AA7AE2AB87DDC0017F268 /* Application */,
+				DA8AA7B02AB87E0A0017F268 /* Data */,
+				DA8AA7AF2AB87DED0017F268 /* View */,
 				DA8AA79D2AB87DB20017F268 /* Main.storyboard */,
 				DA8AA7A32AB87DB30017F268 /* Assets.xcassets */,
 				DA8AA7A52AB87DB30017F268 /* LaunchScreen.storyboard */,
 				DA8AA7A82AB87DB30017F268 /* Info.plist */,
-				DA8AA7A02AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld */,
 			);
 			path = CoffeeShopNew;
+			sourceTree = "<group>";
+		};
+		DA8AA7AE2AB87DDC0017F268 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AA7972AB87DB20017F268 /* AppDelegate.swift */,
+				DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DA8AA7AF2AB87DED0017F268 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA1610DE2AB97357002D00D6 /* Cells */,
+				DA8AA79B2AB87DB20017F268 /* HomeViewController.swift */,
+				DA8AA7B12AB880E80017F268 /* FavoriteViewController.swift */,
+				DA8AA7B32AB881100017F268 /* CategoryViewController.swift */,
+				DA8AA7B52AB8813D0017F268 /* CartViewController.swift */,
+				DA1610F02AB9BD1C002D00D6 /* PaymentViewController.swift */,
+				DAD0A8262ABAC8FF00C08E78 /* ListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DA8AA7B02AB87E0A0017F268 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA8AA7A02AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DAD0A8282ABACC6400C08E78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DAD0A8292ABACCD800C08E78 /* FeedData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,7 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1610E92AB99613002D00D6 /* CategoryCell.xib in Resources */,
 				DA8AA7A72AB87DB30017F268 /* LaunchScreen.storyboard in Resources */,
+				DA1610E22AB97385002D00D6 /* FeedCell.xib in Resources */,
+				DA1610F52AB9D383002D00D6 /* AddressCell.xib in Resources */,
+				DA1610ED2AB9B528002D00D6 /* CartCell.xib in Resources */,
 				DA8AA7A42AB87DB30017F268 /* Assets.xcassets in Resources */,
 				DA8AA79F2AB87DB20017F268 /* Main.storyboard in Resources */,
 			);
@@ -141,10 +238,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA8AA79C2AB87DB20017F268 /* ViewController.swift in Sources */,
+				DA8AA79C2AB87DB20017F268 /* HomeViewController.swift in Sources */,
+				DA1610E52AB994C9002D00D6 /* HomeViewmodel.swift in Sources */,
 				DA8AA7982AB87DB20017F268 /* AppDelegate.swift in Sources */,
+				DA8AA7B62AB8813D0017F268 /* CartViewController.swift in Sources */,
+				DA1610EC2AB9B528002D00D6 /* CartCell.swift in Sources */,
 				DA8AA7A22AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld in Sources */,
+				DAD0A8272ABAC8FF00C08E78 /* ListViewController.swift in Sources */,
+				DAD0A82A2ABACCD800C08E78 /* FeedData.swift in Sources */,
 				DA8AA79A2AB87DB20017F268 /* SceneDelegate.swift in Sources */,
+				DA1610F12AB9BD1C002D00D6 /* PaymentViewController.swift in Sources */,
+				DA1610E12AB97385002D00D6 /* FeedCell.swift in Sources */,
+				DA8AA7B42AB881100017F268 /* CategoryViewController.swift in Sources */,
+				DA8AA7B22AB880E80017F268 /* FavoriteViewController.swift in Sources */,
+				DA1610E82AB99613002D00D6 /* CategoryCell.swift in Sources */,
+				DA1610F42AB9D383002D00D6 /* AddressCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
