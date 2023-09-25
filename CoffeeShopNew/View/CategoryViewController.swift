@@ -11,19 +11,27 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
+    var viewmodel = CategoryViewmodel()
+    let categories = ["drink", "hot drink", "iced drink", "coffee", "tea"]
+    var categoryArray: [CategoryData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        viewmodel.fetchData(with: categories) { categoryData in
+            self.categoryArray = categoryData
+        }
         setCollectionView()
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return categoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as? CategoryCell else { return UICollectionViewCell() }
+        cell.setCell(item: categoryArray[indexPath.row])
         return cell
     }
     
@@ -33,8 +41,8 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = UIScreen.main.bounds.width
-        let cellWidth = (screenWidth - 60) / 2
-        let cellHeight: CGFloat = 100
+        let cellWidth = screenWidth - 40
+        let cellHeight: CGFloat = (9 * (screenWidth - 40)) / 16
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

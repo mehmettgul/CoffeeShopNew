@@ -7,18 +7,17 @@
 
 import Foundation
 
-struct FeedData : Codable {
+struct FeedData : Codable, Equatable {
     
     var id: Int
     var previewURL: String
-    var page: Int
-    var per_page: Int
     
-    init(id: Int, previewURL: String, page: Int, per_page: Int) {
+    init(id: Int, previewURL: String) {
         self.id = id
         self.previewURL = previewURL
-        self.page = page
-        self.per_page = per_page
     }
     
+    static func == (lhs: FeedData, rhs: FeedData) -> Bool {
+        return lhs.id == rhs.id && lhs.previewURL == rhs.previewURL
+    }
 }

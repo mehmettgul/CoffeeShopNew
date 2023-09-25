@@ -17,6 +17,7 @@
 		DA1610F12AB9BD1C002D00D6 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610F02AB9BD1C002D00D6 /* PaymentViewController.swift */; };
 		DA1610F42AB9D383002D00D6 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1610F22AB9D383002D00D6 /* AddressCell.swift */; };
 		DA1610F52AB9D383002D00D6 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1610F32AB9D383002D00D6 /* AddressCell.xib */; };
+		DA441CAE2ABC8B58005C9CFB /* FeedCellViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA441CAD2ABC8B58005C9CFB /* FeedCellViewmodel.swift */; };
 		DA8AA7982AB87DB20017F268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7972AB87DB20017F268 /* AppDelegate.swift */; };
 		DA8AA79A2AB87DB20017F268 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */; };
 		DA8AA79C2AB87DB20017F268 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA79B2AB87DB20017F268 /* HomeViewController.swift */; };
@@ -29,6 +30,8 @@
 		DA8AA7B62AB8813D0017F268 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8AA7B52AB8813D0017F268 /* CartViewController.swift */; };
 		DAD0A8272ABAC8FF00C08E78 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0A8262ABAC8FF00C08E78 /* ListViewController.swift */; };
 		DAD0A82A2ABACCD800C08E78 /* FeedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD0A8292ABACCD800C08E78 /* FeedData.swift */; };
+		DAF10DE52ABD72A2006EE3A6 /* CategoryViewmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF10DE42ABD72A2006EE3A6 /* CategoryViewmodel.swift */; };
+		DAF10DE72ABD7FD7006EE3A6 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF10DE62ABD7FD7006EE3A6 /* CategoryData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,7 @@
 		DA1610F02AB9BD1C002D00D6 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = Cells/PaymentViewController.swift; sourceTree = "<group>"; };
 		DA1610F22AB9D383002D00D6 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		DA1610F32AB9D383002D00D6 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		DA441CAD2ABC8B58005C9CFB /* FeedCellViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellViewmodel.swift; sourceTree = "<group>"; };
 		DA8AA7942AB87DB20017F268 /* CoffeeShopNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShopNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8AA7972AB87DB20017F268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA8AA7992AB87DB20017F268 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		DA8AA7B52AB8813D0017F268 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DAD0A8262ABAC8FF00C08E78 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		DAD0A8292ABACCD800C08E78 /* FeedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedData.swift; sourceTree = "<group>"; };
+		DAF10DE42ABD72A2006EE3A6 /* CategoryViewmodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewmodel.swift; sourceTree = "<group>"; };
+		DAF10DE62ABD7FD7006EE3A6 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				DA1610E42AB994C9002D00D6 /* HomeViewmodel.swift */,
+				DA441CAD2ABC8B58005C9CFB /* FeedCellViewmodel.swift */,
+				DAF10DE42ABD72A2006EE3A6 /* CategoryViewmodel.swift */,
 			);
 			path = Viewmodel;
 			sourceTree = "<group>";
@@ -159,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD0A8292ABACCD800C08E78 /* FeedData.swift */,
+				DAF10DE62ABD7FD7006EE3A6 /* CategoryData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,11 +248,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8AA79C2AB87DB20017F268 /* HomeViewController.swift in Sources */,
+				DAF10DE72ABD7FD7006EE3A6 /* CategoryData.swift in Sources */,
 				DA1610E52AB994C9002D00D6 /* HomeViewmodel.swift in Sources */,
+				DA441CAE2ABC8B58005C9CFB /* FeedCellViewmodel.swift in Sources */,
 				DA8AA7982AB87DB20017F268 /* AppDelegate.swift in Sources */,
 				DA8AA7B62AB8813D0017F268 /* CartViewController.swift in Sources */,
 				DA1610EC2AB9B528002D00D6 /* CartCell.swift in Sources */,
 				DA8AA7A22AB87DB20017F268 /* CoffeeShopNew.xcdatamodeld in Sources */,
+				DAF10DE52ABD72A2006EE3A6 /* CategoryViewmodel.swift in Sources */,
 				DAD0A8272ABAC8FF00C08E78 /* ListViewController.swift in Sources */,
 				DAD0A82A2ABACCD800C08E78 /* FeedData.swift in Sources */,
 				DA8AA79A2AB87DB20017F268 /* SceneDelegate.swift in Sources */,
