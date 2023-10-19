@@ -14,6 +14,9 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var totalPayment: UILabel!
     @IBOutlet weak var confirmCartButton: UIButton!
     
+    var fetchCart = FetchCartViewmodel()
+    var cartItem : Cart?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cartCollectionView.delegate = self
@@ -22,12 +25,17 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
         setCollectionView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        cartCollectionView.reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return fetchCart.countData(entityName: "Cart")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cartCell", for: indexPath) as? CartCell else { return UICollectionViewCell() }
+        cartItem = fetchCart.fetchCart()[indexPath.item]
         return cell
     }
     

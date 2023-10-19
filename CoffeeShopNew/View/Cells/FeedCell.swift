@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol FeedCellDelegate: AnyObject {
+    func didTapButtonInCell(_ cell: UICollectionViewCell)
+    func didTapToCart(_ cell: UICollectionViewCell)
+}
+
 class FeedCell: UICollectionViewCell {
     
     @IBOutlet weak var productImage: UIImageView!
@@ -16,7 +21,11 @@ class FeedCell: UICollectionViewCell {
     @IBOutlet weak var addFavoriteButton: UIButton!
     @IBOutlet weak var View: UIView!
     
+    weak var delegate: FeedCellDelegate?
+    
     var viewmodel = FeedCellViewmodel()
+    var cartviewmodel = CartViewModel()
+    var allCoffees: [Likes] = []
     var numberOfSteps: Int = 0
     var convertedPrice : Double = 0.0
     var price: Double = 0.0
@@ -94,13 +103,61 @@ class FeedCell: UICollectionViewCell {
             task.resume()
         }
     }
+    
+    func setLike(item: Likes) {
+        productName.text = "ÜRÜN"
+        let formattedPrice = formatPrice(Int(item.coffeeId))
+        productPrice.text = String(formattedPrice)
+
+        if let url = URL(string: item.previewURL ?? "") {
+            let session = URLSession.shared
+            let task = session.dataTask(with: url) { [weak self] (data, response, error) in
+                if let error = error {
+                    print("Hata: \(error)")
+                    return
+                }
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        if let dominantColor = self?.viewmodel.findDominantColor(in: image) {
+                            self?.View.backgroundColor = dominantColor
+                            if ((self?.viewmodel.isDarkColor(dominantColor)) ?? false) {
+                                self?.productName.textColor = .white
+                                self?.productPrice.textColor = .white
+                                self?.addCartButton.tintColor = .white
+                                self?.addFavoriteButton.tintColor = .white
+                            } else {
+                                self?.productName.textColor = .black
+                                self?.productPrice.textColor = .black
+                                self?.addCartButton.tintColor = .black
+                                self?.addFavoriteButton.tintColor = .black
+                            }
+                            } else {
+                                print("Renk Bulunamadı")
+                            }
+                        self?.productImage.image = image
+                    }
+                }
+            }
+            task.resume()
+        }
+    }
 
     @IBAction func addCartButtonClicked(_ sender: Any) {
         print("add cart button clicked.")
+        delegate?.didTapToCart(self)
     }
     
     @IBAction func addFavoriteButtonClicked(_ sender: Any) {
-        print("add favorite button clicked.")
+        print("add Favorite Button Clicked")
+        delegate?.didTapButtonInCell(self)
+    }
+    
+    var isLiked: Bool = false {
+        didSet {
+            // Like yapıldığında değişecek şeyler.
+            let buttonImage = isLiked ? UIImage(named: "inFavorite") : UIImage(named: "favorite")
+            addFavoriteButton.setImage(buttonImage, for: .normal)
+        }
     }
     
 }

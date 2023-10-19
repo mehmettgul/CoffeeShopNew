@@ -7,11 +7,13 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, FeedCellDelegate {
     
     @IBOutlet weak var feedCollectionView: UICollectionView!
 
     var viewmodel = HomeViewmodel()
+    var likeviewmodel = FavoriteViewmodel()
+    var cartviewmodel = CartViewModel()
     var dataArray : [FeedData] = []
     var currentPage = 1
     var itemsPerPage = 10
@@ -31,6 +33,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as? FeedCell else { return UICollectionViewCell() }
         let item = dataArray[indexPath.row]
+        let isLiked = likeviewmodel.isLiked(data: item)
+        cell.isLiked = isLiked
+        cell.delegate = self
         cell.setCell(item: item)
         return cell
     }
@@ -65,7 +70,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                         }
                     }
                     self.dataArray = uniqueDataArray
-                    print("--- DİĞER VERİLER ÇEKİLDİ --- \(self.dataArray)")
                     DispatchQueue.main.async {
                         self.feedCollectionView.reloadData()
                     }
@@ -89,12 +93,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 print("Veri çekme başarısız oldu veya veri yok.")
             } else {
                 self.dataArray = dataResponse
-                print("--- İLK VERİ ÇEKİLDİ --- \(self.dataArray)")
                 DispatchQueue.main.async {
                     self.feedCollectionView.reloadData()
                 }
             }
         }
+    }
+    
+    func didTapButtonInCell(_ cell: UICollectionViewCell) {
+        guard let indexPath = feedCollectionView.indexPath(for: cell) else {
+            return
+        }
+        let selectedItem = dataArray[indexPath.row]
+        likeviewmodel.toggleLike(data: selectedItem)
+        feedCollectionView.reloadData()
+    }
+    
+    func didTapToCart(_ cell: UICollectionViewCell) {
+        guard let indexPath = feedCollectionView.indexPath(for: cell) else {
+            return
+        }
+        let selectedItem = dataArray[indexPath.row]
+        cartviewmodel.addCartIfNoExists(data: selectedItem)
     }
 }
 

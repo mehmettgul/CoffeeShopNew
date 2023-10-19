@@ -14,5 +14,7 @@ class CartCell: UICollectionViewCell {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = true
     }
+    
+    
 
 }

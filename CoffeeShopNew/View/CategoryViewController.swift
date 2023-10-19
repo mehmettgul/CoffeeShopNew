@@ -47,9 +47,9 @@ class CategoryViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Hücreye tıklandı.")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let anotherViewController = storyboard.instantiateViewController(withIdentifier: "listViewController") as? ListViewController {
+            anotherViewController.responseTitle = categoryArray[indexPath.row].tag
             self.navigationController?.pushViewController(anotherViewController, animated: true)
         }
     }
